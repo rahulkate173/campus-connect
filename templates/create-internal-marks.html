@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Marks Entry | Faculty</title>
+    <link rel="stylesheet" href="create-internal-marks-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-exam-hub.html"><i class="fas fa-chevron-left"></i> Back to Exam Section</a>
+        </nav>
+
+        <header class="page-header">
+            <div class="header-main">
+                <h1>Internal Marks Entry</h1>
+                <p>Subject: <strong>Operating Systems (CS402)</strong> • TE Comp A</p>
+            </div>
+            <!-- <div class="header-actions">
+                <button class="export-btn"><i class="fas fa-file-export"></i> Export CSV</button>
+            </div> -->
+        </header>
+
+        <form id="marksForm">
+            <div class="table-wrapper">
+                <table class="entry-table">
+                    <thead>
+                        <tr>
+                            <th>Roll</th>
+                            <th>Student Name</th>
+                            <th>Unit Test (15)</th>
+                            <th>Lab Work (10)</th>
+                            <th>Attd (5)</th>
+                            <th>Total (30)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marksTableBody">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="sticky-footer">
+                <p id="saveStatus">All changes drafted locally.</p>
+                <button type="submit" class="save-btn">Upload to Database</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="create-internal-marks.js"></script>
+</body>
+</html>

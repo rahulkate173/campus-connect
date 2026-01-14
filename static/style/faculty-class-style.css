@@ -1,0 +1,79 @@
+:root {
+    --faculty-primary: #059669;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 1000px; margin: 0 auto; }
+
+/* Header Responsiveness */
+.faculty-header {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Management Grid Setup */
+.management-grid {
+    display: flex;
+    flex-wrap: wrap; /* Key for responsiveness */
+    gap: 20px;
+}
+
+.manage-btn {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    /* Default: Full width for mobile */
+    flex: 1 1 100%; 
+}
+
+/* Tablet and Desktop View: 2 Columns */
+@media (min-width: 768px) {
+    .manage-btn {
+        flex: 1 1 calc(50% - 10px); /* 2 per row minus gap */
+    }
+}
+
+.icon-box {
+    width: 50px; height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.bg-green { background: #ecfdf5; color: #059669; }
+.bg-blue { background: #eff6ff; color: #2563eb; }
+.bg-purple { background: #faf5ff; color: #9333ea; }
+.bg-orange { background: #fff7ed; color: #ea580c; }
+.bg-red { background: #fef2f2; color: #dc2626; }
+
+.btn-text h3 { margin: 0; font-size: 1.1rem; color: var(--text-main); }
+.btn-text p { margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted); text-align: left; }
+
+.manage-btn:hover {
+    border-color: var(--faculty-primary);
+    background-color: #f0fdf4;
+}

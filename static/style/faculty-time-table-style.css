@@ -1,0 +1,87 @@
+:root {
+    --faculty-primary: #059669;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 700px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--faculty-primary); font-weight: 600; }
+
+.page-header { margin: 25px 0; }
+
+/* Day Selector Flexbox */
+.day-selector {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30px;
+    overflow-x: auto; /* For mobile scroll */
+    padding-bottom: 5px;
+}
+
+.day-btn {
+    flex: 1;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 12px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.day-btn.active {
+    background: var(--faculty-primary);
+    color: white;
+    border-color: var(--faculty-primary);
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
+}
+
+/* Timeline Cards */
+.timeline { display: flex; flex-direction: column; gap: 20px; }
+
+.lecture-card {
+    display: flex; /* Horizontal Flexbox */
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.lecture-card:hover { transform: scale(1.02); border-color: var(--faculty-primary); }
+
+.time-slot {
+    background: #ecfdf5;
+    padding: 20px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--border);
+}
+
+.time-slot .start { font-weight: 800; color: var(--faculty-primary); font-size: 0.9rem; }
+.time-slot .duration { font-size: 0.75rem; color: #64748b; margin-top: 5px; }
+
+.lecture-details { padding: 20px; flex-grow: 1; }
+
+.subject-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.subject-header h3 { margin: 0; font-size: 1.1rem; }
+
+.type-tag { font-size: 0.7rem; padding: 4px 8px; border-radius: 5px; font-weight: 700; text-transform: uppercase; }
+.type-tag.lab { background: #fef2f2; color: #dc2626; }
+.type-tag.lecture { background: #eff6ff; color: #2563eb; }
+
+.class-info, .room-info { font-size: 0.85rem; color: var(--text-muted); margin: 8px 0 0; }
+.class-info i, .room-info i { margin-right: 8px; color: #94a3b8; }

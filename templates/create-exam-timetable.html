@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Exam Timetable | Faculty</title>
+    <link rel="stylesheet" href="create-exam-timetable-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-exam-hub.html"><i class="fas fa-chevron-left"></i> Back to Exam Section</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Exam Schedule Builder</h1>
+            <p>TE Computer Engineering • Div A • Summer 2026</p>
+        </header>
+
+        <section class="builder-section">
+            <div class="form-card">
+                <h3>Add New Exam Slot</h3>
+                <form id="examForm" class="flex-form">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" id="examDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <select id="examSubject" required>
+                            <option value="">Select Subject</option>
+                            <option>Operating Systems</option>
+                            <option>Database Management</option>
+                            <option>Computer Networks</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Session</label>
+                        <select id="examTime">
+                            <option>10:00 AM - 01:00 PM</option>
+                            <option>02:00 PM - 05:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Room</label>
+                        <input type="text" id="examRoom" placeholder="Ex: 301-A" required>
+                    </div>
+                    <button type="submit" class="add-btn"><i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <div class="list-header">
+                <h2>Current Draft</h2>
+                <button class="publish-btn">Publish to Students</button>
+            </div>
+            <div class="timetable-list" id="timetableList">
+                </div>
+        </section>
+    </div>
+
+    <script type="module" src="create-exam-timetable.js"></script>
+</body>
+</html>

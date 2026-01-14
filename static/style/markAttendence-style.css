@@ -1,0 +1,102 @@
+:root {
+    --primary: #059669;
+    --danger: #dc2626;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 600px; margin: 0 auto; }
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.page-header h1 { font-size: 1.5rem; margin: 0; }
+.page-header p { font-size: 0.9rem; color: #64748b; margin-top: 5px; }
+
+.select-all-btn {
+    background: white;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Student List Flexbox */
+.student-list {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.student-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.st-info { display: flex; align-items: center; gap: 15px; }
+.roll { font-weight: 700; color: #94a3b8; min-width: 25px; }
+.name { font-weight: 500; color: #1e293b; }
+
+/* Custom Radio Toggles */
+.status-toggle { display: flex; gap: 5px; }
+.status-toggle input { display: none; }
+
+.status-toggle label {
+    width: 35px; height: 35px;
+    display: flex; align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+/* Color states for P and A */
+#st01p:checked + .p-label, #st02p:checked + .p-label, #st03p:checked + .p-label {
+    background: var(--primary); color: white; border-color: var(--primary);
+}
+
+#st01a:checked + .a-label, #st02a:checked + .a-label, #st03a:checked + .a-label {
+    background: var(--danger); color: white; border-color: var(--danger);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white; border: none;
+    padding: 15px; border-radius: 8px;
+    font-weight: 600; margin-top: 25px;
+    cursor: pointer;
+}
+/* Custom Radio Toggles - Generic Version */
+.status-toggle input[value="P"]:checked + .p-label {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.status-toggle input[value="A"]:checked + .a-label {
+    background: var(--danger);
+    color: white;
+    border-color: var(--danger);
+}

@@ -1,0 +1,76 @@
+:root {
+    --primary: #059669; /* Emerald for Faculty */
+    --danger: #dc2626;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 650px; margin: 0 auto; }
+
+.attendance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Student List Container */
+.student-list {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.student-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.student-info { display: flex; align-items: center; gap: 15px; }
+.roll-no { font-weight: 800; color: #94a3b8; width: 30px; }
+.student-name { font-weight: 500; color: #1e293b; }
+
+/* Status Toggle Styling */
+.status-group { display: flex; gap: 8px; }
+.status-group input { display: none; } /* Hide the ugly circles */
+
+.status-label {
+    width: 40px; height: 40px;
+    display: flex; align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+/* Logic for Checked Colors */
+input[value="P"]:checked + .status-label {
+    background: var(--primary); color: white; border-color: var(--primary);
+}
+
+input[value="A"]:checked + .status-label {
+    background: var(--danger); color: white; border-color: var(--danger);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white; border: none;
+    padding: 16px; border-radius: 8px;
+    font-weight: 700; font-size: 1rem;
+    margin-top: 25px; cursor: pointer;
+}

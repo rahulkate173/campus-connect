@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance | Faculty</title>
+    <link rel="stylesheet" href="markAttendence-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="page-header">
+            <div>
+                <h1>Mark Attendance</h1>
+                <p>Data Structures • TE Comp A • 14 Jan 2026</p>
+            </div>
+            <button class="select-all-btn" id="markAllPresent">Mark All Present</button>
+        </header>
+
+        <form id="attendanceForm">
+            <div class="student-list">
+                <!-- <div class="student-row">
+                    <div class="st-info">
+                        <span class="roll">01</span>
+                        <span class="name">Aditya Kulkarni</span>
+                    </div>
+                    <div class="status-toggle">
+                        <input type="radio" name="st01" id="st01p" value="P" checked>
+                        <label for="st01p" class="p-label">P</label>
+                        
+                        <input type="radio" name="st01" id="st01a" value="A">
+                        <label for="st01a" class="a-label">A</label>
+                    </div>
+                </div>
+
+                <div class="student-row">
+                    <div class="st-info">
+                        <span class="roll">02</span>
+                        <span class="name">Neha Sharma</span>
+                    </div>
+                    <div class="status-toggle">
+                        <input type="radio" name="st02" id="st02p" value="P" checked>
+                        <label for="st02p" class="p-label">P</label>
+                        
+                        <input type="radio" name="st02" id="st02a" value="A">
+                        <label for="st02a" class="a-label">A</label>
+                    </div>
+                </div>
+
+                <div class="student-row">
+                    <div class="st-info">
+                        <span class="roll">03</span>
+                        <span class="name">Rahul Kate</span>
+                    </div>
+                    <div class="status-toggle">
+                        <input type="radio" name="st03" id="st03p" value="P" checked>
+                        <label for="st03p" class="p-label">P</label>
+                        
+                        <input type="radio" name="st03" id="st03a" value="A">
+                        <label for="st03a" class="a-label">A</label>
+                    </div>
+                </div>
+                 -->
+            </div>
+
+            <footer class="form-footer">
+                <button type="submit" class="submit-btn">Submit Attendance</button>
+            </footer>
+        </form>
+    </div>
+
+    <script src="mark-attendance.js"></script>
+</body>
+</html>

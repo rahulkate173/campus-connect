@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Section | Faculty Portal</title>
+    <link rel="stylesheet" href="facultyExamhub-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-dashboard.html"><i class="fas fa-chevron-left"></i> Faculty Hub</a>
+        </nav>
+
+        <header class="section-header">
+            <div class="header-content">
+                <i class="fas fa-file-signature section-icon"></i>
+                <h1>Examination Management</h1>
+                <p>Upload marks, manage schedules, and coordinate with SPPU.</p>
+            </div>
+        </header>
+
+        <div class="exam-grid">
+            
+            <button class="exam-card" onclick="location.href='upload-internal.html'">
+                <div class="card-icon bg-green"><i class="fas fa-edit"></i></div>
+                <div class="card-text">
+                    <h3>Internal Marks</h3>
+                    <p>Enter Unit Test, Lab, and Assignment scores.</p>
+                </div>
+                <span class="status-tag">Drafting</span>
+            </button>
+
+            <button class="exam-card" onclick="location.href='upload-results.html'">
+                <div class="card-icon bg-blue"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div class="card-text">
+                    <h3>Result Upload</h3>
+                    <p>Bulk upload semester results (CSV/Excel).</p>
+                </div>
+                <span class="status-tag locked">Locked</span>
+            </button>
+
+            <button class="exam-card" onclick="location.href='manage-exam-timetable.html'">
+                <div class="card-icon bg-purple"><i class="fas fa-calendar-plus"></i></div>
+                <div class="card-text">
+                    <h3>Exam Timetable</h3>
+                    <p>Create and publish exam schedules.</p>
+                </div>
+                <span class="status-tag active">Published</span>
+            </button>
+
+            <button class="exam-card" onclick="window.open('http://exam.unipune.ac.in/', '_blank')">
+                <div class="card-icon bg-orange"><i class="fas fa-university"></i></div>
+                <div class="card-text">
+                    <h3>SPPU Official</h3>
+                    <p>Access university exam forms & circulars.</p>
+                </div>
+                <i class="fas fa-external-link-alt ext-link"></i>
+            </button>
+
+        </div>
+    </div>
+
+</body>
+</html>

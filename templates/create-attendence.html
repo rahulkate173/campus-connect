@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance | Faculty Hub</title>
+    <link rel="stylesheet" href="create-attendence-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="attendance-header">
+            <div class="header-text">
+                <h1>Mark Attendance</h1>
+                <p id="classDetails">TE Computer - Div A • Data Structures</p>
+            </div>
+            <div class="header-actions">
+                <button id="markAllPresent" class="secondary-btn">Select All Present</button>
+            </div>
+        </header>
+
+        <form id="attendanceForm">
+            <div class="student-list" id="studentContainer">
+                <div class="loading">Loading students...</div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="submit-btn">Save Attendance</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="create-attendence.js"></script>
+</body>
+</html>

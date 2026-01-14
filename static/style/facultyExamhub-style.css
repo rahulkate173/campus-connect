@@ -1,0 +1,89 @@
+:root {
+    --faculty-primary: #059669;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 40px 20px;
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--faculty-primary); font-weight: 600; }
+
+.section-header { text-align: center; margin: 40px 0 60px; }
+.section-icon { font-size: 3rem; color: var(--faculty-primary); margin-bottom: 15px; }
+.section-header h1 { font-size: 2rem; margin: 0; }
+.section-header p { color: var(--text-muted); margin-top: 10px; }
+
+/* Grid Layout with Flexbox */
+.exam-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.exam-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1 1 calc(50% - 10px); /* 2 per row on desktop */
+    min-width: 300px;
+    text-align: left;
+}
+
+.exam-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--faculty-primary);
+    box-shadow: 0 10px 20px rgba(5, 150, 105, 0.1);
+}
+
+.card-icon {
+    width: 60px; height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.bg-green { background: #ecfdf5; color: #059669; }
+.bg-blue { background: #eff6ff; color: #2563eb; }
+.bg-purple { background: #faf5ff; color: #9333ea; }
+.bg-orange { background: #fff7ed; color: #ea580c; }
+
+.card-text { flex-grow: 1; }
+.card-text h3 { margin: 0; font-size: 1.1rem; color: var(--text-dark); }
+.card-text p { margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+
+/* Status Tags */
+.status-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #475569;
+    text-transform: uppercase;
+}
+
+.status-tag.active { background: #dcfce7; color: #166534; }
+.status-tag.locked { background: #fee2e2; color: #991b1b; }
+
+.ext-link { color: #cbd5e1; font-size: 1rem; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exam-card { flex: 1 1 100%; }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Timetable | University Hub</title>
+    <link rel="stylesheet" href="faculty-time-table-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Weekly Schedule</h1>
+            <p>Faculty: Prof. Rahul Sharma • Sem IV</p>
+        </header>
+
+        <div class="day-selector">
+            <button class="day-btn active" data-day="Mon">Mon</button>
+            <button class="day-btn" data-day="Tue">Tue</button>
+            <button class="day-btn" data-day="Wed">Wed</button>
+            <button class="day-btn" data-day="Thu">Thu</button>
+            <button class="day-btn" data-day="Fri">Fri</button>
+        </div>
+
+        <div class="timeline" id="timelineContainer">
+            <div class="lecture-card">
+                <div class="time-slot">
+                    <span class="start">09:00 AM</span>
+                    <span class="duration">60 min</span>
+                </div>
+                <div class="lecture-details">
+                    <div class="subject-header">
+                        <h3>Operating Systems</h3>
+                        <span class="type-tag lab">Laboratory</span>
+                    </div>
+                    <p class="class-info"><i class="fas fa-users"></i> TE Comp Div A</p>
+                    <p class="room-info"><i class="fas fa-map-marker-alt"></i> Lab 204, Tech Wing</p>
+                </div>
+            </div>
+
+            <div class="lecture-card">
+                <div class="time-slot">
+                    <span class="start">11:30 AM</span>
+                    <span class="duration">60 min</span>
+                </div>
+                <div class="lecture-details">
+                    <div class="subject-header">
+                        <h3>Database Systems</h3>
+                        <span class="type-tag lecture">Lecture</span>
+                    </div>
+                    <p class="class-info"><i class="fas fa-users"></i> SE Comp Div B</p>
+                    <p class="room-info"><i class="fas fa-map-marker-alt"></i> Room 302</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="faculty-time-table.js"></script>
+</body>
+</html>
