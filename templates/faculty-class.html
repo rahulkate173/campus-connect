@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Control Panel | University Hub</title>
+    <link rel="stylesheet" href="faculty-class-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="#"><i class="fas fa-chevron-left"></i> Faculty Dashboard</a>
+        </nav>
+
+        <header class="faculty-header">
+            <div class="header-info">
+                <h1>Classroom Management</h1>
+                <p>Manage your subjects and students.</p>
+            </div>
+            <div class="current-class">
+                <strong>TE - Comp (Div A)</strong>
+            </div>
+        </header>
+
+        <div class="management-grid">
+            <button class="manage-btn" onclick="location.href='mark-attendance.html'">
+                <div class="icon-box bg-green"><i class="fas fa-user-check"></i></div>
+                <div class="btn-text">
+                    <h3>Mark Attendance</h3>
+                    <p>Take daily attendance</p>
+                </div>
+            </button>
+
+            <button class="manage-btn" onclick="location.href='faculty-timetable.html'">
+                <div class="icon-box bg-blue"><i class="fas fa-calendar-alt"></i></div>
+                <div class="btn-text">
+                    <h3>My Timetable</h3>
+                    <p>View weekly schedule</p>
+                </div>
+            </button>
+
+            <button class="manage-btn" onclick="location.href='manage-assignments.html'">
+                <div class="icon-box bg-purple"><i class="fas fa-tasks"></i></div>
+                <div class="btn-text">
+                    <h3>Assignments</h3>
+                    <p>Post and grade tasks</p>
+                </div>
+            </button>
+
+            <button class="manage-btn" onclick="location.href='post-announcement.html'">
+                <div class="icon-box bg-orange"><i class="fas fa-bullhorn"></i></div>
+                <div class="btn-text">
+                    <h3>Announcements</h3>
+                    <p>Broadcast updates</p>
+                </div>
+            </button>
+
+            <button class="manage-btn" onclick="location.href='manage-tests.html'">
+                <div class="icon-box bg-red"><i class="fas fa-laptop-code"></i></div>
+                <div class="btn-text">
+                    <h3>Online Tests</h3>
+                    <p>Monitor live exams</p>
+                </div>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

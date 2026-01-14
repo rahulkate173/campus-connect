@@ -1,0 +1,85 @@
+:root {
+    --faculty-primary: #059669;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 950px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--faculty-primary); font-weight: 600; }
+
+.page-header { margin: 25px 0 40px; }
+
+/* Flexbox Form */
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 40px;
+}
+
+.flex-form {
+    display: flex;
+    flex-wrap: wrap; /* Responsive wrap */
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.input-group label { font-size: 0.75rem; font-weight: 700; margin-bottom: 5px; color: #64748b; }
+
+input, select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline-color: var(--faculty-primary);
+}
+
+.add-btn {
+    background: var(--faculty-primary);
+    color: white; border: none;
+    height: 42px; width: 42px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Schedule List */
+.list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+
+.publish-btn {
+    background: #1e293b;
+    color: white; border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600; cursor: pointer;
+}
+
+.slot-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: flex; /* Flexbox for row layout */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.slot-info h4 { margin: 0; color: #1e293b; }
+.slot-info p { font-size: 0.85rem; color: #64748b; margin: 4px 0 0; }
+
+.room-badge { background: #f1f5f9; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+
+.remove-btn { color: #dc2626; border: none; background: none; cursor: pointer; }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Portal | University Hub</title>
+    <link rel="stylesheet" href="parentdashboard-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="top-nav">
+            <div class="parent-profile">
+                <i class="fas fa-user-shield parent-icon"></i>
+                <div>
+                    <strong>Welcome, Mr. Sharma</strong>
+                    <span>Parent of: John Sharma (TE Comp)</span>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="location.href='../index.html'">Logout</button>
+        </nav>
+
+        <header class="dash-header">
+            <h1>Ward's Progress Overview</h1>
+            <p>Track attendance, academic performance, and official notices.</p>
+        </header>
+
+        <div class="parent-grid">
+            
+            <div class="p-card" onclick="location.href='parent-attendance.html'">
+                <div class="card-top">
+                    <div class="icon-wrap bg-green"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stats">
+                        <span class="big-num">88%</span>
+                        <small>Avg. Attendance</small>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Attendance</h3>
+                    <p>Detailed subject-wise presence and monthly reports.</p>
+                </div>
+                <div class="card-footer">View Report <i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <div class="p-card" onclick="location.href='parent-academics.html'">
+                <div class="card-top">
+                    <div class="icon-wrap bg-blue"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stats">
+                        <span class="big-num">8.9</span>
+                        <small>Current SGPA</small>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Academics</h3>
+                    <p>View internal marks, final results, and credit points.</p>
+                </div>
+                <div class="card-footer">View Marks <i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <div class="p-card" onclick="location.href='parent-announcements.html'">
+                <div class="card-top">
+                    <div class="icon-wrap bg-orange"><i class="fas fa-bullhorn"></i></div>
+                    <div class="stats">
+                        <span class="big-num">03</span>
+                        <small>New Notices</small>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Announcements</h3>
+                    <p>General college notices and parent-teacher meeting alerts.</p>
+                </div>
+                <div class="card-footer">View Notices <i class="fas fa-chevron-right"></i></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

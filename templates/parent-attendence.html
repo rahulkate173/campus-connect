@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracking | Parent Portal</title>
+    <link rel="stylesheet" href="parent-attendence-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="parent-dashboard.html"><i class="fas fa-chevron-left"></i> Back to Dashboard</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Attendance Monitoring</h1>
+            <p>Real-time tracking of your ward's classroom presence.</p>
+        </header>
+
+        <div class="overall-card">
+            <div class="chart-box">
+                <div class="circular-progress">
+                    <span class="percentage">82%</span>
+                </div>
+            </div>
+            <div class="overall-info">
+                <h2>Satisfactory Progress</h2>
+                <p>John has attended <strong>164</strong> out of <strong>200</strong> total lectures this semester.</p>
+                <span class="status-badge stable">Stable</span>
+            </div>
+        </div>
+
+        <section class="alerts-section">
+            <div class="section-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Critical Absence Alerts</h2>
+            </div>
+            <div class="alert-list" id="alertContainer">
+                <div class="alert-item">
+                    <div class="alert-icon"><i class="fas fa-clock"></i></div>
+                    <div class="alert-text">
+                        <h4>Mathematics IV</h4>
+                        <p>Attendance fell to <strong>64%</strong>. Requires 6 consecutive lectures to reach 75%.</p>
+                    </div>
+                    <button class="notify-btn">View Dates</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-section">
+            <div class="section-title">
+                <i class="fas fa-list-ul"></i>
+                <h2>Subject Breakdown</h2>
+            </div>
+            <div class="subject-grid" id="subjectGrid">
+                </div>
+        </section>
+    </div>
+
+    <script type="module" src="parent-attendence.js"></script>
+</body>
+</html>

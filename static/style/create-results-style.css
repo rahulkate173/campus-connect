@@ -1,0 +1,70 @@
+:root {
+    --faculty-primary: #059669;
+    --bg: #f8fafc;
+    --border: #cbd5e1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 850px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--faculty-primary); font-weight: 600; }
+
+.page-header { margin: 25px 0 40px; }
+
+/* Drag and Drop Zone */
+.upload-card {
+    background: white;
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    padding: 60px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-card:hover, .upload-card.drag-over {
+    border-color: var(--faculty-primary);
+    background: #f0fdf4;
+}
+
+.upload-icon { font-size: 3.5rem; color: #94a3b8; margin-bottom: 20px; }
+.template-link { margin-top: 20px; font-size: 0.85rem; }
+.template-link a { color: var(--faculty-primary); text-decoration: none; font-weight: 600; }
+
+/* Preview Table */
+.preview-section { margin-top: 40px; animation: fadeIn 0.4s ease; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+
+.preview-table-wrapper {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.preview-table { width: 100%; border-collapse: collapse; }
+.preview-table th { background: #f1f5f9; padding: 12px; text-align: left; font-size: 0.8rem; }
+.preview-table td { padding: 12px; border-top: 1px solid #f1f5f9; font-size: 0.9rem; }
+
+/* Footer Actions */
+.action-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.confirm-btn {
+    background: var(--faculty-primary);
+    color: white; border: none;
+    padding: 12px 25px; border-radius: 8px;
+    font-weight: 700; cursor: pointer;
+}
+
+.cancel-btn { background: #fee2e2; color: #991b1b; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

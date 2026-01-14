@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Assignments | Faculty</title>
+    <link rel="stylesheet" href="manage-assignment-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="faculty-theme">
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Assignments</h1>
+            <p>Create new tasks and track student submissions.</p>
+        </header>
+
+        <section class="create-section">
+            <div class="form-card">
+                <h3><i class="fas fa-plus-circle"></i> Post New Assignment</h3>
+                <form id="assignmentForm">
+                    <div class="input-row">
+                        <input type="text" id="title" placeholder="Assignment Title (e.g., Disk Scheduling)" required>
+                        <input type="date" id="deadline" required>
+                    </div>
+                    <textarea id="instructions" placeholder="Enter instructions or requirements..."></textarea>
+                    <div class="form-actions">
+                        <label class="file-label">
+                            <i class="fas fa-paperclip"></i> Attach PDF
+                            <input type="file" hidden>
+                        </label>
+                        <button type="submit" class="post-btn">Post Assignment</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <h2>Active Assignments</h2>
+            <div class="assignment-list" id="assignmentList">
+                <div class="loader">Fetching active tasks...</div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="manage-assignments.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Result Upload | Faculty</title>
+    <link rel="stylesheet" href="create-results-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-exam-hub.html"><i class="fas fa-chevron-left"></i> Back to Exam Hub</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Upload Final Results</h1>
+            <p>Upload Semester End Examination (SEE) marks for current Semester </p>
+        </header>
+
+        <section class="upload-section">
+            <div class="upload-card" id="dropZone">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <h3>Drag & Drop Result CSV</h3>
+                <p>or click to browse from your computer</p>
+                <input type="file" id="fileInput" accept=".csv, .xlsx" hidden>
+                <div class="template-link">
+                    <a href="#"><i class="fas fa-download"></i> Download CSV Template</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview-section" id="previewSection" style="display: none;">
+            <div class="section-header">
+                <h2>Data Preview</h2>
+                <span id="recordCount">0 Records Found</span>
+            </div>
+            
+            <div class="preview-table-wrapper">
+                <table class="preview-table">
+                    <thead>
+                        <tr>
+                            <th>PRN</th>
+                            <th>Student Name</th>
+                            <th>SGPA</th>
+                            <th>Result</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="previewBody">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="action-footer">
+                <button class="cancel-btn" id="clearBtn">Clear All</button>
+                <button class="confirm-btn" id="confirmUpload">Confirm & Push to Database</button>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="create-results.js"></script>
+</body>
+</html>

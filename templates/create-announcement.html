@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Announcement | Faculty</title>
+    <link rel="stylesheet" href="create-announcement-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Classroom Announcements</h1>
+            <p>Broadcast messages to your students instantly.</p>
+        </header>
+
+        <section class="compose-section">
+            <div class="form-card">
+                <form id="announcementForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Target Class</label>
+                            <select id="targetClass">
+                                <option>TE - Computer Eng (Div A)</option>
+                                <option>TE - Computer Eng (Div B)</option>
+                                <option>All Students</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Priority</label>
+                            <select id="priority">
+                                <option value="normal">Normal</option>
+                                <option value="urgent">Urgent</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea id="messageContent" placeholder="Type your announcement here..." required></textarea>
+                    </div>
+
+                    <div class="form-footer">
+                        <p class="char-count">Character Limit: 500</p>
+                        <button type="submit" class="send-btn">
+                            <i class="fas fa-paper-plane"></i> Post Announcement
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <h3>Sent History</h3>
+            <div id="announcementHistory" class="history-list">
+                </div>
+        </section>
+    </div>
+
+    <script type="module" src="post-announcement.js"></script>
+</body>
+</html>

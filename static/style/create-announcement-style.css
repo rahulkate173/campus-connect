@@ -1,0 +1,92 @@
+:root {
+    --faculty-primary: #059669;
+    --urgent: #dc2626;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 750px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--faculty-primary); font-weight: 600; }
+
+.page-header { margin: 25px 0; }
+
+/* Form Styling */
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.form-row {
+    display: flex; /* Flexbox for dropdowns */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+select, textarea {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    outline-color: var(--faculty-primary);
+}
+
+textarea { height: 120px; resize: none; }
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.char-count { font-size: 0.75rem; color: #94a3b8; }
+
+.send-btn {
+    background: var(--faculty-primary);
+    color: white; border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* History List */
+.history-list { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+
+.history-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--faculty-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.history-card.urgent { border-left-color: var(--urgent); }
+
+.msg-content h4 { margin: 0 0 5px 0; font-size: 0.95rem; }
+.msg-content p { margin: 0; font-size: 0.85rem; color: #64748b; }
+.msg-date { font-size: 0.75rem; color: #94a3b8; white-space: nowrap; }

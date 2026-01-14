@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard | University Portal</title>
+    <link rel="stylesheet" href="facultydashboard-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="top-nav">
+            <div class="user-profile">
+                <div class="avatar">RS</div>
+                <div>
+                    <strong>Prof. Rahul Sharma</strong>
+                    <span>Computer Engineering Dept.</span>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="location.href='../index.html'">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </nav>
+
+        <header class="dash-header">
+            <h1>Welcome Back, Professor</h1>
+            <p>Select a module to manage your academic activities for today.</p>
+        </header>
+
+        <div class="dash-grid">
+            
+            <div class="dash-card" onclick="location.href='faculty-classroom.html'">
+                <div class="card-content">
+                    <div class="icon-circle bg-emerald">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="text-group">
+                        <h2>Classroom</h2>
+                        <p>Attendance, Assignments, Timetable, and Announcements.</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>3 Active Classes</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="dash-card" onclick="location.href='faculty-exam-hub.html'">
+                <div class="card-content">
+                    <div class="icon-circle bg-blue">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="text-group">
+                        <h2>Examination</h2>
+                        <p>Internal Marks, Result Uploads, and SPPU Coordination.</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>Result Entry Open</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="status-bar">
+            <div class="status-item">
+                <i class="fas fa-clock"></i>
+                <span>Next Lecture: <strong>10:00 AM (Lab 204)</strong></span>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

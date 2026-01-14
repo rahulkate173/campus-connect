@@ -1,0 +1,87 @@
+:root {
+    --faculty-primary: #059669;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 20px;
+}
+
+.container { max-width: 950px; margin: 0 auto; }
+
+.page-header {
+    display: flex; /* Flexbox for title vs export button */
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+/* Table Styling */
+.table-wrapper {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow-x: auto; /* For mobile responsiveness */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.entry-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.entry-table th {
+    background: #f1f5f9;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.entry-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Input Box Styling */
+.mark-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.mark-input:focus {
+    border-color: var(--faculty-primary);
+    outline: none;
+    background: #ecfdf5;
+}
+
+.total-cell { font-weight: 800; color: var(--faculty-primary); }
+
+/* Footer */
+.sticky-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.save-btn {
+    background: var(--faculty-primary);
+    color: white; border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700; cursor: pointer;
+}

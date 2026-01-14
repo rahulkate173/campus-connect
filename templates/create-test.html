@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Online Tests | Faculty</title>
+    <link rel="stylesheet" href="create-test-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="faculty-theme">
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="faculty-classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="page-header">
+            <div class="header-text">
+                <h1>Online Test Portal</h1>
+                <p>Monitor live quizzes and create new assessments.</p>
+            </div>
+            <button class="create-test-btn" id="openModal">
+                <i class="fas fa-plus"></i> Create New Test
+            </button>
+        </header>
+
+        <section class="test-monitor">
+            <h2 class="section-label">Live Now</h2>
+            <div class="test-card live">
+                <div class="test-info">
+                    <h3>Unit Test 3: Operating Systems</h3>
+                    <p>Started at 10:00 AM • TE Comp Div A</p>
+                </div>
+                <div class="test-stats">
+                    <div class="stat">
+                        <span class="count">42/50</span>
+                        <small>Submitted</small>
+                    </div>
+                    <div class="stat">
+                        <span class="count pulse">8</span>
+                        <small>In-Progress</small>
+                    </div>
+                    <button class="monitor-btn">View Live Feed</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-upcoming">
+            <h2 class="section-label">Scheduled Assessments</h2>
+            <div class="test-list">
+                <div class="test-card-simple">
+                    <div class="info-group">
+                        <i class="fas fa-calendar-alt icon"></i>
+                        <div>
+                            <h4>Python Basics Final</h4>
+                            <p>Jan 20, 2026 • 02:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="action-group">
+                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="del-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="create-test.js"></script>
+</body>
+</html>

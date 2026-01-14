@@ -1,0 +1,87 @@
+:root {
+    --parent-primary: #4f46e5;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #10b981;
+    --bg: #f8fafc;
+}
+
+body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+.container { max-width: 800px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--parent-primary); font-weight: 600; font-size: 0.9rem; }
+
+/* Overall Card - Flex Row */
+.overall-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 30px 0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.circular-progress {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(var(--parent-primary) 82%, #e2e8f0 0);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+}
+
+.circular-progress::before {
+    content: ""; position: absolute;
+    width: 100px; height: 100px;
+    background: white; border-radius: 50%;
+}
+
+.percentage { position: relative; font-size: 1.8rem; font-weight: 800; color: var(--text-dark); }
+
+.overall-info h2 { margin: 0; font-size: 1.4rem; }
+.overall-info p { color: #64748b; margin: 10px 0; line-height: 1.5; }
+.status-badge.stable { background: #ecfdf5; color: var(--success); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+
+/* Alerts - Flex Column */
+.alert-item {
+    background: #fff1f2;
+    border: 1px solid #fecaca;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.alert-icon { color: var(--danger); font-size: 1.2rem; }
+.alert-text { flex-grow: 1; }
+.alert-text h4 { margin: 0; color: #991b1b; }
+.alert-text p { margin: 3px 0 0; font-size: 0.85rem; color: #b91c1c; }
+
+.notify-btn {
+    background: white; border: 1px solid #fecaca;
+    padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; cursor: pointer;
+}
+
+/* Subject Grid */
+.subject-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.subject-mini-card {
+    flex: 1 1 calc(50% - 10px);
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-name { font-weight: 600; font-size: 0.9rem; }
+.sub-per { font-weight: 800; color: var(--parent-primary); }
+.low { color: var(--danger); }
