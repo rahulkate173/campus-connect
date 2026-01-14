@@ -1,0 +1,141 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: #0f0c29; */
+    background: white;
+    color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 80px; height: 80px;
+    background: #3a86ff;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.side-nav a {
+    display: block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.side-nav a:hover, .side-nav a.active {
+    background: rgba(58, 134, 255, 0.2);
+    color: #3a86ff;
+}
+
+.logout { margin-top: auto; color: #ff4d4d !important; }
+
+/* Main Dashboard Grid */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.dash-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.dash-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.dash-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+.dash-card p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 25px; line-height: 1.6; }
+
+/* Glow Effects */
+.blue-glow{
+   border: 2px solid #3a86ff;
+}
+.green-glow{
+    border: 2px solid #06d6a0;
+}
+.orange-glow{
+    border: 2px solid #ff9d00;
+}
+.blue-glow:hover { border-color: #3a86ff; box-shadow: 0 0 30px rgba(58, 134, 255, 0.3); }
+.blue-glow .card-icon { color: #3a86ff; }
+
+.green-glow:hover { border-color: #06d6a0; box-shadow: 0 0 30px rgba(6, 214, 160, 0.3); }
+.green-glow .card-icon { color: #06d6a0; }
+
+.orange-glow:hover { border-color: #ff9d00; box-shadow: 0 0 30px rgba(255, 157, 0, 0.3); }
+.orange-glow .card-icon { color: #ff9d00; }
+
+.card-btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dash-card:hover .card-btn {
+    background: white;
+    color: black;
+}

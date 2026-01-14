@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+ background: white;
+    color: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 80px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: #ff9d00; }
+.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links a { color: black; text-decoration: none; opacity: 0.7; font-size: 0.9rem; }
+.login-nav-btn { background: transparent; border: 1px solid black; color: black; padding: 8px 20px; border-radius: 20px; cursor: pointer; }
+
+/* Hero */
+.hero-container { display: flex; justify-content: space-around; align-items: center; padding: 50px 80px; }
+.hero-text h1 { font-size: 3.2rem; line-height: 1.2; margin-bottom: 30px; animation: fadeInUp 1s; }
+
+/* Buttons */
+.auth-buttons { display: flex; flex-direction: column; gap: 15px; }
+.btn { width: 260px; padding: 15px; border-radius: 30px; border: none; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; }
+.student-btn { background: #3a86ff; color: white; }
+.teacher-btn { background: #00b4d8; color: white; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+/* Animated Image */
+.floating-img { width: 450px; border-radius: 20px; animation: float 4s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+/* Features Bar */
+.features-bar { display: flex; justify-content: center; gap: 40px; margin-top: 50px; }
+.feature-item { text-align: center; font-size: 0.7rem; font-weight: bold; }
+.icon-circle { width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.3rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 10px; }
+.orange { color: #ffa500; } .blue { color: #00d2ff; } .green { color: #00ff88; } .gold { color: #ffd700; }
+
+/* Modals */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 1000; }
+.modal-box { background:whitesmoke; width: 380px; margin: 100px auto; padding: 40px; border-radius: 20px; position: relative; text-align: center; animation: pop 0.3s ease; border: 1px solid white; }
+.student-border { border-color: #3a86ff; }
+.teacher-border { border-color: #00b4d8; }
+
+.input-field { background: whitesmoke; padding: 12px; border-radius: 10px; margin: 15px 0; display: flex; align-items: center; border: 1px solid black; }
+.input-field input { background: transparent; border: none; color: black; padding-left: 10px; width: 100%; outline: none; }
+.submit-btn { width: 100%; padding: 12px; border-radius: 10px; border: none; color: white; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.student-bg { background: #3a86ff; }
+.teacher-bg { background: #00b4d8; }
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 24px; cursor: pointer; }
+
+@keyframes pop { from { transform: scale(0.8); opacity: 0; } }
+@keyframes fadeInUp { from { transform: translateY(30px); opacity: 0; } }

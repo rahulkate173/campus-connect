@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --primary: #2563eb;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.page-header {
+    margin: 30px 0 50px;
+}
+
+.page-header h1 { font-size: 2rem; margin-bottom: 8px; }
+.page-header p { color: var(--text-light); }
+
+/* Button Grid Styling */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.feature-btn:hover {
+    transform: translateX(10px);
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-right: 20px;
+}
+
+/* Icon Colors */
+.blue { background: #eff6ff; color: #2563eb; }
+.red { background: #fef2f2; color: #dc2626; }
+.orange { background: #fff7ed; color: #ea580c; }
+.purple { background: #faf5ff; color: #9333ea; }
+.green { background: #f0fdf4; color: #16a34a; }
+
+.btn-text h3 { font-size: 1.1rem; margin-bottom: 2px; }
+.btn-text p { font-size: 0.85rem; color: var(--text-light); }
+
+.arrow {
+    margin-left: auto;
+    color: var(--border);
+    transition: 0.3s;
+}
+
+.feature-btn:hover .arrow {
+    color: var(--primary);
+}

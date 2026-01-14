@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker | University Hub</title>
+    <link rel="stylesheet" href="attendence-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="header">
+            <h1>Attendance Report</h1>
+            <p>Academic Year 2025-26 | Current Semester</p>
+        </header>
+
+        <div class="overall-card">
+            <div class="summary-text">
+                <h2>Overall Presence</h2>
+                <p>You have attended <strong>185</strong> out of <strong>210</strong> total lectures.</p>
+                <span class="status-tag good">Status: Good Standing</span>
+            </div>
+            <div class="progress-ring">
+                <svg width="120" height="120">
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle cx="60" cy="60" r="50" class="percent-88"></circle>
+                </svg>
+                <div class="number">88%</div>
+            </div>
+        </div>
+
+        <div class="subject-grid">
+            
+            <div class="sub-card">
+                <div class="sub-header">
+                    <h3>Data Structures</h3>
+                    <span class="percent-tag">92%</span>
+                </div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 92%;"></div></div>
+                <p class="count">Attended: 46 / 50</p>
+            </div>
+
+            <div class="sub-card">
+                <div class="sub-header">
+                    <h3>Operating Systems</h3>
+                    <span class="percent-tag">85%</span>
+                </div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+                <p class="count">Attended: 34 / 40</p>
+            </div>
+
+            <div class="sub-card danger">
+                <div class="sub-header">
+                    <h3>Mathematics IV</h3>
+                    <span class="percent-tag">68%</span>
+                </div>
+                <div class="bar-bg"><div class="bar-fill danger-fill" style="width: 68%;"></div></div>
+                <p class="count">Attended: 27 / 40</p>
+                <small class="warning-text"><i class="fas fa-exclamation-triangle"></i> Below 75% Criteria</small>
+            </div>
+
+            <div class="sub-card">
+                <div class="sub-header">
+                    <h3>Java Programming</h3>
+                    <span class="percent-tag">95%</span>
+                </div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+                <p class="count">Attended: 38 / 40</p>
+            </div>
+
+            <div class="sub-card">
+                <div class="sub-header">
+                    <h3>Database Mgmt</h3>
+                    <span class="percent-tag">90%</span>
+                </div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+                <p class="count">Attended: 36 / 40</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

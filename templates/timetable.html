@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable | University Hub</title>
+    <link rel="stylesheet" href="timetable-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="header">
+            <div>
+                <h1>Weekly Timetable</h1>
+                <p>Academic Session 2025-26 | Semester IV</p>
+            </div>
+            <button class="print-btn" onclick="window.print()">
+                <i class="fas fa-print"></i> Print PDF
+            </button>
+        </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">09:00 - 10:00</td>
+                        <td><span class="subject blue">Operating Systems</span><br><small>Room 302</small></td>
+                        <td><span class="subject green">Mathematics</span><br><small>Room 101</small></td>
+                        <td><span class="subject blue">Operating Systems</span><br><small>Room 302</small></td>
+                        <td><span class="subject purple">Java Programming</span><br><small>Lab 2</small></td>
+                        <td><span class="subject green">Mathematics</span><br><small>Room 101</small></td>
+                    </tr>
+                    <tr>
+                        <td class="time">10:00 - 11:00</td>
+                        <td><span class="subject purple">Java Programming</span><br><small>Lab 2</small></td>
+                        <td><span class="subject orange">Economics</span><br><small>Room 204</small></td>
+                        <td><span class="subject purple">Java Programming</span><br><small>Lab 2</small></td>
+                        <td><span class="subject blue">Operating Systems</span><br><small>Room 302</small></td>
+                        <td><span class="subject orange">Economics</span><br><small>Room 204</small></td>
+                    </tr>
+                    <tr class="break-row">
+                        <td class="time">11:00 - 11:30</td>
+                        <td colspan="5">SHORT BREAK</td>
+                    </tr>
+                    <tr>
+                        <td class="time">11:30 - 12:30</td>
+                        <td><span class="subject cyan">Database Mgmt</span><br><small>Room 405</small></td>
+                        <td><span class="subject blue">Operating Systems</span><br><small>Room 302</small></td>
+                        <td><span class="subject cyan">Database Mgmt</span><br><small>Room 405</small></td>
+                        <td><span class="subject green">Mathematics</span><br><small>Room 101</small></td>
+                        <td><span class="subject cyan">Database Mgmt</span><br><small>Room 405</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --gold: #d97706;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.career-header {
+    text-align: center;
+    margin: 40px 0 60px;
+}
+
+.logo-icon {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.career-header h1 { font-size: 2.2rem; margin: 0; }
+.career-header p { color: #64748b; margin-top: 10px; }
+
+/* Button Grid */
+.career-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.career-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.career-btn:hover {
+    transform: translateX(10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.15);
+}
+
+.icon-wrap {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.bg-gold { background: #fffbeb; color: #d97706; }
+.bg-blue { background: #eff6ff; color: #2563eb; }
+
+.btn-info { flex-grow: 1; }
+.btn-info h3 { margin: 0; font-size: 1.25rem; color: var(--text); }
+.btn-info p { margin: 5px 0 0; font-size: 0.95rem; color: #64748b; }
+
+
+
+.arrow {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+.career-btn:hover .arrow {
+    color: var(--primary);
+}
+

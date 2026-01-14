@@ -1,0 +1,120 @@
+:root {
+    --primary: #2563eb;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 30px 20px;
+}
+
+.container { max-width: 850px; margin: 0 auto; }
+
+.breadcrumb a { text-decoration: none; color: var(--primary); font-size: 0.9rem; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+
+.system-check {
+    background: #f0fdf4;
+    color: var(--success);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #bbf7d0;
+}
+
+.status-dot {
+    height: 8px; width: 8px;
+    background-color: var(--success);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Test Section Layout */
+.section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.test-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.test-card.active { border-left: 5px solid var(--primary); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
+
+.test-info { display: flex; align-items: center; gap: 20px; }
+
+.test-icon {
+    width: 50px; height: 50px;
+    background: #eff6ff;
+    color: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.upcoming-icon { background: #f8fafc; color: #94a3b8; }
+.done-icon { background: #f0fdf4; color: var(--success); }
+
+.test-info h3 { margin: 0; font-size: 1.1rem; }
+.test-info p { margin: 5px 0 0; font-size: 0.85rem; color: #64748b; }
+
+/* Meta & Buttons */
+.test-meta { display: flex; align-items: center; gap: 20px; }
+
+.timer-alert { color: var(--danger); font-size: 0.85rem; font-weight: 600; }
+
+.start-btn {
+    background: var(--primary);
+    color: white; border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.view-btn {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.badge {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.score-text { font-weight: 700; color: var(--success); }

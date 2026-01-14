@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login | University Hub</title>
+    <link rel="stylesheet" href="facultyLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="faculty-theme">
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="header">
+                <i class="fas fa-chalkboard-teacher logo-icon"></i>
+                <h1>Faculty Portal</h1>
+                <p>Welcome, Professor. Please sign in to manage your classes.</p>
+            </div>
+
+            <form id="facultyLoginForm">
+                <div class="input-group">
+                    <label for="email">Staff Email</label>
+                    <div class="field">
+                        <i class="fas fa-user-tie"></i>
+                        <input type="email" id="email" placeholder="professor@university.edu" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Launch Dashboard</span>
+                </button>
+            </form>
+
+            <div class="footer">
+                <p>Need access? <a href="#">Contact IT Support</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="faculty-auth.js"></script>
+</body>
+</html>

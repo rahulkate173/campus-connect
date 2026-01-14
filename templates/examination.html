@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Hub | University Portal</title>
+    <link rel="stylesheet" href="examination-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="exam-theme">
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="dashboard.html"><i class="fas fa-chevron-left"></i> Back to Dashboard</a>
+        </nav>
+
+        <header class="page-header">
+            <div class="header-content">
+                <i class="fas fa-file-invoice logo-main"></i>
+                <h1>Examination Portal</h1>
+                <p>Manage exam schedules, view results, and access SPPU resources.</p>
+            </div>
+        </header>
+
+        <div class="exam-grid">
+            
+            <button class="exam-btn" onclick="location.href='exam-timetable.html'">
+                <div class="icon-circle bg-blue"><i class="fas fa-calendar-check"></i></div>
+                <div class="btn-info">
+                    <h3>Exam Timetable</h3>
+                    <p>Check dates for End-Sem & Mid-Sem</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </button>
+
+            <!-- <button class="exam-btn" onclick="location.href='exam-notices.html'">
+                <div class="icon-circle bg-orange"><i class="fas fa-bullhorn"></i></div>
+                <div class="btn-info">
+                    <h3>Exam Announcements</h3>
+                    <p>Important notices and room allotments</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </button> -->
+
+            <button class="exam-btn" onclick="window.open('http://unipune.ac.in/', '_blank')">
+                <div class="icon-circle bg-red"><i class="fas fa-university"></i></div>
+                <div class="btn-info">
+                    <h3>SPPU Portal</h3>
+                    <p>Official University link & circulars</p>
+                </div>
+                <i class="fas fa-external-link-alt arrow"></i>
+            </button>
+
+            <button class="exam-btn" onclick="location.href='internal-marks.html'">
+                <div class="icon-circle bg-purple"><i class="fas fa-poll"></i></div>
+                <div class="btn-info">
+                    <h3>Internal Marks</h3>
+                    <p>Term work, lab & unit test scores</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </button>
+
+            <button class="exam-btn" onclick="location.href='result.html'">
+                <div class="icon-circle bg-green"><i class="fas fa-award"></i></div>
+                <div class="btn-info">
+                    <h3>Final Results</h3>
+                    <p> marksheet & SGPA/CGPA</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </button>
+
+        </div>
+    </div>
+
+</body>
+</html>

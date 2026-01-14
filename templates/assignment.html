@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | University Hub</title>
+    <link rel="stylesheet" href="assignment-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="header">
+            <div>
+                <h1>Course Assignments</h1>
+                <p>Track your submissions and upcoming deadlines.</p>
+            </div>
+            <div class="stats-group">
+                <div class="stat-pill"><strong>3</strong> Pending</div>
+                <div class="stat-pill success"><strong>12</strong> Completed</div>
+            </div>
+        </header>
+
+        <div class="assignment-list">
+            
+            <div class="assignment-card border-blue">
+                <div class="card-main">
+                    <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                    <div class="details">
+                        <h3>Build a REST API with Node.js</h3>
+                        <p>Subject: Advanced Web Technologies • Prof. Miller</p>
+                        <div class="tags">
+                            <span class="tag-deadline"><i class="far fa-clock"></i> Due in 2 days</span>
+                            <span class="tag-points">100 Points</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-outline">View Details</button>
+                    <button class="btn-primary">Submit Now</button>
+                </div>
+            </div>
+
+            <div class="assignment-card border-red">
+                <div class="card-main">
+                    <div class="file-icon red-icon"><i class="fas fa-file-invoice"></i></div>
+                    <div class="details">
+                        <h3>Database Schema Design</h3>
+                        <p>Subject: DBMS • Dr. Sarah Jenkins</p>
+                        <div class="tags">
+                            <span class="tag-overdue"><i class="fas fa-exclamation-triangle"></i> Overdue (Oct 12)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-primary-red">Submit Late</button>
+                </div>
+            </div>
+
+            <div class="assignment-card border-gray disabled">
+                <div class="card-main">
+                    <div class="file-icon green-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="details">
+                        <h3>Introduction to Machine Learning</h3>
+                        <p>Subject: AI & ML • Prof. Richardson</p>
+                        <div class="tags">
+                            <span class="tag-submitted">Submitted on Oct 10</span>
+                            <span class="tag-grade">Grade: 95/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-outline">View Work</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tests | University Hub</title>
+    <link rel="stylesheet" href="online-test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="header">
+            <div>
+                <h1>Assessment Portal</h1>
+                <p>Verify your connection before starting any live examination.</p>
+            </div>
+            <div class="system-check">
+                <span class="status-dot"></span> System Ready
+            </div>
+        </header>
+
+        <section class="test-section">
+            <h2 class="section-title"><i class="fas fa-play-circle"></i> Live Now</h2>
+            <div class="test-card active">
+                <div class="test-info">
+                    <div class="test-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div>
+                        <h3>Data Structures Quiz - Unit 3</h3>
+                        <p>Duration: 45 Mins • 30 Questions</p>
+                    </div>
+                </div>
+                <div class="test-meta">
+                    <span class="timer-alert"><i class="fas fa-hourglass-half"></i> Ends in 28m 10s</span>
+                    <button class="start-btn" onclick="startTest()">Join Test</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-section">
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Scheduled</h2>
+            <div class="test-card">
+                <div class="test-info">
+                    <div class="test-icon upcoming-icon"><i class="fas fa-brain"></i></div>
+                    <div>
+                        <h3>AI & Machine Learning Mid-Term</h3>
+                        <p>Jan 18, 2026 • 10:00 AM</p>
+                    </div>
+                </div>
+                <div class="test-meta">
+                    <span class="badge">Locked</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-section">
+            <h2 class="section-title"><i class="fas fa-check-double"></i> Recent Results</h2>
+            <div class="test-card completed">
+                <div class="test-info">
+                    <div class="test-icon done-icon"><i class="fas fa-poll-h"></i></div>
+                    <div>
+                        <h3>Python Basics Assessment</h3>
+                        <p>Completed on Jan 12, 2026</p>
+                    </div>
+                </div>
+                <div class="test-meta">
+                    <span class="score-text">Score: 28/30</span>
+                    <button class="view-btn">Review</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function startTest() {
+            if(confirm("Are you sure you want to start the test? The timer will begin immediately.")) {
+                alert("Opening Secure Exam Browser...");
+            }
+        }
+    </script>
+</body>
+</html>

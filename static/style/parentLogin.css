@@ -1,0 +1,77 @@
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Theme Accents */
+.student-theme { --primary: #2563eb; }
+.faculty-theme { --primary: #059669; }
+.parent-theme { --primary: #7c3aed; }
+
+.auth-container { width: 100%; max-width: 400px; padding: 20px; }
+
+.auth-box {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-icon { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
+h1 { font-size: 1.5rem; margin: 0; color: var(--text); }
+p { color: #64748b; font-size: 0.9rem; margin-top: 8px; }
+
+.input-group { text-align: left; margin-top: 20px; }
+label { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+
+.field {
+    display: flex;
+    align-items: center;
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 8px;
+}
+
+.field i { color: #94a3b8; margin-right: 10px; }
+.field input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: opacity 0.2s;
+}
+
+button:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.footer { margin-top: 25px; font-size: 0.85rem; color: #64748b; }
+.footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+.hidden { display: none; }
