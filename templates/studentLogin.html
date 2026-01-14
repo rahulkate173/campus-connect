@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | University Hub</title>
+    <link rel="stylesheet" href="studentLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="student-theme">
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="header">
+                <i class="fas fa-graduation-cap logo-icon"></i>
+                <h1>Student Portal</h1>
+                <p>Welcome back! Please enter your details.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">University Email</label>
+                    <div class="field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="name@university.edu" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Sign In</span>
+                    <div id="loader" class="hidden"></div>
+                </button>
+            </form>
+
+            <div class="footer">
+                <p>Don't have an account? <a href="signup-student.html">Contact Admin</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="student-auth.js"></script>
+</body>
+</html>

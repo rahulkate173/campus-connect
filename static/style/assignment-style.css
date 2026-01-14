@@ -1,0 +1,85 @@
+:root {
+    --primary: #2563eb;
+    --red: #dc2626;
+    --green: #16a34a;
+    --bg: #f8f9fa;
+    --border: #e5e7eb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 40px 20px;
+    color: #1f2937;
+}
+
+.container { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb a { text-decoration: none; color: var(--primary); font-size: 0.9rem; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.stats-group { display: flex; gap: 10px; }
+.stat-pill {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
+}
+.stat-pill.success { color: var(--green); border-color: #bbf7d0; }
+
+/* Assignment Cards */
+.assignment-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.border-blue { border-left-color: var(--primary); }
+.border-red { border-left-color: var(--red); }
+.border-gray { border-left-color: #9ca3af; }
+
+.card-main { display: flex; gap: 20px; align-items: flex-start; }
+
+.file-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    background: #eff6ff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.red-icon { color: var(--red); background: #fef2f2; }
+.green-icon { color: var(--green); background: #f0fdf4; }
+
+.details h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
+.details p { margin: 0 0 12px 0; color: #6b7280; font-size: 0.9rem; }
+
+.tags { display: flex; gap: 12px; font-size: 0.8rem; font-weight: 600; }
+.tag-deadline { color: var(--primary); }
+.tag-overdue { color: var(--red); }
+.tag-submitted { color: var(--green); }
+
+/* Buttons */
+.card-actions { display: flex; gap: 10px; }
+.btn-primary { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.btn-primary-red { background: var(--red); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+.btn-outline { background: white; border: 1px solid var(--border); padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+
+.disabled { opacity: 0.8; }

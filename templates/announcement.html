@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | University Hub</title>
+    <link rel="stylesheet" href="announcements-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="classroom.html"><i class="fas fa-chevron-left"></i> Back to Classroom</a>
+        </nav>
+
+        <header class="header">
+            <h1>Campus Notice Board</h1>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search notices...">
+            </div>
+        </header>
+
+        <div class="announcement-card pinned">
+            <div class="pin-tag"><i class="fas fa-thumbtack"></i> PINNED</div>
+            <div class="card-header">
+                <div class="author-info">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="Admin">
+                    <div>
+                        <h3>Annual Tech Symposium 2026</h3>
+                        <p>Posted by: University Admin • 1 day ago</p>
+                    </div>
+                </div>
+                <span class="category-tag event">Event</span>
+            </div>
+            <div class="card-body">
+                <p>Registration for the annual "Tech-X" symposium is now open. All students from the CS and IT departments are encouraged to participate. Prizes worth $5000 to be won!</p>
+                <div class="attachments">
+                    <div class="file-chip"><i class="fas fa-file-pdf"></i> Event_Brochure.pdf</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="announcement-card">
+                <div class="card-header">
+                    <div class="author-info">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Smith&background=f97316&color=fff" alt="Prof">
+                        <div>
+                            <h3>Mid-Semester Exam Schedule</h3>
+                            <p>Posted by: Prof. Sarah Smith • 4 hours ago</p>
+                        </div>
+                    </div>
+                    <span class="category-tag exam">Exam</span>
+                </div>
+                <div class="card-body">
+                    <p>The timetable for the Mid-Semester examination has been finalized. Please check the attached document for your specific slot and room number.</p>
+                    <div class="attachments">
+                        <div class="file-chip"><i class="fas fa-file-excel"></i> Exam_Schedule_S4.xlsx</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcement-card">
+                <div class="card-header">
+                    <div class="author-info">
+                        <img src="https://ui-avatars.com/api/?name=Dean&background=6b7280&color=fff" alt="Dean">
+                        <div>
+                            <h3>Holiday Notice: Republic Day</h3>
+                            <p>Posted by: Dean's Office • 6 hours ago</p>
+                        </div>
+                    </div>
+                    <span class="category-tag holiday">Holiday</span>
+                </div>
+                <div class="card-body">
+                    <p>The university will remain closed on January 26th in observance of Republic Day. Regular classes will resume from January 27th.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+:root {
+    --primary: #2563eb;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 40px 20px;
+    color: #1e293b;
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--primary); font-size: 0.9rem; }
+
+.header { margin: 30px 0; }
+.header h1 { font-size: 1.8rem; margin-bottom: 5px; }
+
+/* Overall Card with Circular Progress */
+.overall-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.status-tag.good { background: #ecfdf5; color: var(--success); }
+
+/* SVG Progress Ring */
+.progress-ring { position: relative; }
+.progress-ring svg { transform: rotate(-90deg); }
+.progress-ring circle {
+    fill: none;
+    stroke: #e2e8f0;
+    stroke-width: 10;
+}
+.progress-ring circle.percent-88 {
+    stroke: var(--primary);
+    stroke-dasharray: 314;
+    stroke-dashoffset: 37; /* Calculations for 88% */
+    stroke-linecap: round;
+}
+.progress-ring .number {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; font-weight: 800;
+}
+
+/* Subject Cards Grid */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.sub-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.sub-header h3 { font-size: 1rem; color: #475569; }
+.percent-tag { font-weight: 800; color: var(--primary); }
+
+.bar-bg {
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.bar-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.count { font-size: 0.85rem; color: #64748b; }
+
+/* Danger Styling */
+.danger { border-color: #fecaca; }
+.danger-fill { background: var(--danger); }
+.warning-text { color: var(--danger); font-size: 0.75rem; display: block; margin-top: 8px; }

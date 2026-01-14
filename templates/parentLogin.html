@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Portal Login | University Hub</title>
+    <link rel="stylesheet" href="parentLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="parent-theme">
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="header">
+                <i class="fas fa-user-friends logo-icon"></i>
+                <h1>Parent Portal</h1>
+                <p>Secure access to monitor your child's academic journey.</p>
+            </div>
+
+            <form id="parentLoginForm">
+                <div class="input-group">
+                    <label for="email">Registered Email</label>
+                    <div class="field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="parent@example.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Access Portal</span>
+                </button>
+            </form>
+
+            <div class="footer">
+                <p>Trouble logging in? <a href="#">Request Access</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="parent-auth.js"></script>
+</body>
+</html>

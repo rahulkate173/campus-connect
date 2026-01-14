@@ -1,0 +1,114 @@
+:root {
+    --primary: #2563eb;
+    --live: #16a34a;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0; padding: 40px 20px;
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+.breadcrumb a { text-decoration: none; color: var(--primary); font-size: 0.9rem; }
+
+.page-header { margin: 30px 0 40px; }
+.page-header h1 { font-size: 2rem; margin: 0; }
+.page-header p { color: var(--text-muted); margin-top: 8px; }
+
+/* Flexbox Hackathon List */
+.hackathon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hack-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex; /* Main Flex */
+    align-items: center;
+    gap: 24px;
+    transition: box-shadow 0.3s ease;
+}
+
+.active-border { border-left: 5px solid var(--primary); }
+
+/* Left Section: Date Box */
+.date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    color: var(--primary);
+    min-width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.date-box.upcoming { background: #f1f5f9; color: #94a3b8; }
+.date-box .day { font-size: 1.6rem; font-weight: 800; }
+.date-box .month { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; }
+
+/* Middle Section: Details */
+.hack-details { flex-grow: 1; }
+
+.hack-header {
+    display: flex; /* Flex for Title + Pill */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hack-header h3 { margin: 0; font-size: 1.2rem; color: var(--text-dark); }
+
+.status-pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.status-pill.live { background: #dcfce7; color: var(--live); }
+
+.desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; }
+
+.hack-meta {
+    display: flex; /* Flex for Meta Tags */
+    gap: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.hack-meta span i { margin-right: 6px; }
+
+/* Right Section: Action Button */
+.reg-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.wait-btn {
+    background: #f1f5f9;
+    color: #94a3b8;
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 8px;
+    white-space: nowrap;
+}

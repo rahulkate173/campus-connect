@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | University Hub</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="avatar">JS</div>
+                <h3>John Student</h3>
+                <p>ID: 2024-UI-101</p>
+            </div>
+            <nav class="side-nav">
+                <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-user"></i> Profile</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dash-header">
+                <h2>Welcome Back!</h2>
+                <div class="date-time" id="dateTime">Loading...</div>
+            </header>
+
+            <div class="card-grid">
+                <div class="dash-card blue-glow" onclick="location.href='#classroom'">
+                    <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+                    <h3>Classroom</h3>
+                    <p>Access notes, upload assignments, and view course materials like Google Classroom.</p>
+                    <button class="card-btn">Open Classroom</button>
+                </div>
+
+                <div class="dash-card green-glow" onclick="location.href='#exam'">
+                    <div class="card-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Examination</h3>
+                    <p>View your marks for each semester, check exam schedules, and download result sheets.</p>
+                    <button class="card-btn">View Marks</button>
+                </div>
+
+                <div class="dash-card orange-glow" onclick="location.href='#career'">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Career</h3>
+                    <p>Track your progress, download merit certificates, and explore placement opportunities.</p>
+                    <button class="card-btn">My Certificates</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Simple script to show current date
+        function updateDate() {
+            const now = new Date();
+            document.getElementById('dateTime').innerText = now.toDateString();
+        }
+        updateDate();
+    </script>
+</body>
+</html>

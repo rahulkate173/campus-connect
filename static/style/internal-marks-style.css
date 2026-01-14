@@ -1,0 +1,78 @@
+:root {
+    --primary: #2563eb;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb a { text-decoration: none; color: var(--primary); font-size: 0.9rem; font-weight: 500; }
+
+.page-header { margin: 25px 0 40px; }
+.page-header h1 { font-size: 1.8rem; margin: 0; }
+.page-header p { color: #64748b; margin-top: 5px; }
+
+/* Marks Card */
+.marks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.marks-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+
+
+.card-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fdfdfd;
+}
+
+.sub-info h3 { margin: 0; font-size: 1.1rem; color: #1e293b; }
+.sub-code { font-size: 0.8rem; color: #94a3b8; font-weight: 600; }
+
+.total-score { text-align: right; }
+.score-num { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+.out-of { color: #94a3b8; font-size: 0.9rem; }
+
+/* Breakdown Table */
+.breakdown-table {
+    padding: 0 20px 20px;
+}
+
+.breakdown-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.breakdown-table td {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border);
+    color: #64748b;
+}
+
+.breakdown-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #1e293b;
+}
+
