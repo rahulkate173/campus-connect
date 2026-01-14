@@ -1,3 +1,14 @@
+__pycache__/
+*.pyc
+.env
+uploads/
+uploads/*
+/.venv
+venv/
+*.sqlite3
+__pycache__/
+.pytest_cache/
+.mypy_cache/
 # Python-generated files
 __pycache__/
 *.py[oc]

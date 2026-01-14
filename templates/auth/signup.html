@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - Campus Connect{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/facultyLogin.css') }}">
+{% endblock %}
+
+{% block content %}
+  <h1>Sign Up</h1>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.full_name.label }}<br />
+      {{ form.full_name(size=40) }}
+    </div>
+    <div>
+      {{ form.email.label }}<br />
+      {{ form.email(size=40) }}
+    </div>
+    <div>
+      {{ form.password.label }}<br />
+      {{ form.password() }}
+    </div>
+    <div>
+      {{ form.role.label }}<br />
+      {{ form.role() }}
+    </div>
+    <div>
+      {{ form.submit() }}
+    </div>
+  </form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='script/script.js') }}"></script>
+{% endblock %}

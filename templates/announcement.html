@@ -1,3 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Announcement{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/announcements-style.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>Announcement</h1>
+    <p>College announcements and exam alerts.</p>
+{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
 <head>

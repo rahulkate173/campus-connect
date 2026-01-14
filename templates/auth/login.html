@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Campus Connect{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/facultyLogin.css') }}">
+{% endblock %}
+
+{% block content %}
+  <h1>Login</h1>
+  <form method="post" action="{{ url_for('auth.login') }}">
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.email.label }}<br />
+      {{ form.email(size=40) }}
+    </div>
+    <div>
+      {{ form.password.label }}<br />
+      {{ form.password() }}
+    </div>
+    <div>
+      {{ form.submit() }}
+    </div>
+  </form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='script/script.js') }}"></script>
+{% endblock %}
