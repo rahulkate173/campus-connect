@@ -1,17 +1,7 @@
 # Faculty Backend (Flask)
 
-A minimal Flask backend for faculty to manage branch-specific classroom and examination tasks using CSV files as storage (no Google APIs).
+as per workflow finalised at morning
 
-Features:
-- Signup / Login
-- Branch selection (FE/SE/TE/BE)
-- Dashboard per branch
-- Classroom:
-  - Timetable: view, add entries
-  - Assignments: add, view
-  - Online Tests: add test with optional Google Form URL + upload CSV for scores
-  - Attendance: add entries (student_id,status) and view analysis
-- Examination: placeholder page
 
 How to run
 1. Create a virtualenv and activate it (Windows):
@@ -28,3 +18,4 @@ Data is stored under `data/` as CSV files; for example, `assignments_BE.csv`, `a
 Notes
 - This is intentionally simple and not meant for production. Passwords are stored in plain text for brevity — replace with hashed passwords in real deployments.
 - You can expand the `examination` area to add schedules and marks CSV uploads similarly to online tests.
+
