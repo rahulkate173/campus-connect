@@ -3,7 +3,7 @@ FastAPI entry point for Vercel deployment
 This file serves the Flask app through FastAPI for serverless deployment
 """
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import os
@@ -63,11 +63,19 @@ async def catch_all(request: Request, path: str):
                 query_string=str(request.url.query).encode() if request.url.query else b""
             )
             
-            # Return Flask response
-            return JSONResponse(
-                content=response.get_json() if response.content_type == 'application/json' else response.get_data(as_text=True),
+            # Return Flask response with proper content type handling
+            if response.content_type and 'application/json' in response.content_type:
+                content = response.get_json()
+            elif response.content_type and 'text/html' in response.content_type:
+                content = response.get_data(as_text=True)
+            else:
+                content = response.get_data(as_text=True)
+            
+            return Response(
+                content=content if isinstance(content, str) else str(content),
                 status_code=response.status_code,
-                headers=dict(response.headers)
+                headers=dict(response.headers),
+                media_type=response.content_type or 'text/html'
             )
     except Exception as e:
         return JSONResponse(
