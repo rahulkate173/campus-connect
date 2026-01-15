@@ -28,29 +28,3 @@ def attendance():
 def announcement():
     """Render parent announcement page"""
     return render_template('parent-announcement.html')
-
-# API routes
-@bp.route('/api/parent/<parent_id>/child')
-def get_child_info(parent_id):
-    """Get parent's child information"""
-    try:
-        result = asyncio.run(supabase_service.get_parent_child_info(parent_id))
-        if result.get('success'):
-            return jsonify(result), 200
-        else:
-            return jsonify(result), 404
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
-
-@bp.route('/api/announcements')
-def get_announcements():
-    """Get announcements for parents"""
-    try:
-        role = request.args.get('role', 'parent')
-        result = asyncio.run(supabase_service.get_announcements(role))
-        if result.get('success'):
-            return jsonify(result), 200
-        else:
-            return jsonify(result), 400
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
