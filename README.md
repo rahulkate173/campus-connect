@@ -4,10 +4,10 @@ A comprehensive college management system with three portals: Student, Parent, a
 
 Contributors
 
-Rahul Kate
-Aditya Tilekar
-Siddesh Tarle
-Padmaraj Pawar
+- Rahul Kate
+- Aditya Tilekar
+- Siddesh Tarle
+- Padmaraj Pawar
 
 
 ## Features
