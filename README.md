@@ -2,6 +2,14 @@
 
 A comprehensive college management system with three portals: Student, Parent, and Teacher. Built with Flask/FastAPI backend and Supabase database, deployable on Vercel.
 
+Contributors
+
+Rahul Kate
+Aditya Tilekar
+Siddesh Tarle
+Padmaraj Pawar
+
+
 ## Features
 
 - **Student Portal**: Dashboard, attendance tracking, assignments, timetable, marks, announcements
