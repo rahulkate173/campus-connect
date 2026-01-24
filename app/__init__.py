@@ -3,7 +3,8 @@ import os
 
 def create_app():
     template_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "templates")
-    app = Flask(__name__,template_folder=template_path)
+    static_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "static")
+    app = Flask(__name__,template_folder=template_path,static_folder=static_path)
 
     from .parents import parents_bp
     from .student import students_bp

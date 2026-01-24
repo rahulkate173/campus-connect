@@ -23,13 +23,13 @@
             <div class="hero-text">
                 <h1 class="reveal-text">MANAGE YOUR ACADEMIC JOURNEY</h1>
                 <div class="auth-buttons">
-                    <a class="btn student-btn" href="">
+                    <a class="btn student-btn" href="{{ url_for('students.login') }}">
                         <i class="fas fa-graduation-cap"></i> STUDENT LOGIN
                     </a>
-                    <a class="btn teacher-btn" href="">
+                    <a class="btn teacher-btn" href="{{ url_for('teachers.login') }}">
                         <i class="fas fa-chalkboard-teacher"></i> TEACHER LOGIN
                     </a>
-                    <a class="btn teacher-btn" href="">
+                    <a class="btn teacher-btn" href="{{ url_for('parents.login') }}">
                         <i class="fas fa-chalkboard-teacher"></i> PARENT LOGIN
                     </a>
 

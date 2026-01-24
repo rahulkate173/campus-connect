@@ -19,7 +19,7 @@
                     <span>Computer Engineering Dept.</span>
                 </div>
             </div>
-            <button class="logout-btn" onclick="location.href='../index.html'">
+            <button class="logout-btn" onclick="location.href='{{ url_for('home') }}'">
                 <i class="fas fa-sign-out-alt"></i> Logout
             </button>
         </nav>
@@ -31,7 +31,7 @@
 
         <div class="dash-grid">
             
-            <div class="dash-card" onclick="location.href='faculty-classroom.html'">
+            <div class="dash-card" onclick="location.href='{{ url_for('teachers.classroom') }}'"> 
                 <div class="card-content">
                     <div class="icon-circle bg-emerald">
                         <i class="fas fa-chalkboard-teacher"></i>
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <div class="dash-card" onclick="location.href='faculty-exam-hub.html'">
+            <div class="dash-card" onclick="location.href='{{ url_for('teachers.examHub') }}'"> 
                 <div class="card-content">
                     <div class="icon-circle bg-blue">
                         <i class="fas fa-file-invoice"></i>
