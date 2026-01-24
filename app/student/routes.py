@@ -11,3 +11,9 @@ def dashboard():
         "initials": "JS"
     }
     return render_template("studentdashboard.html", student=student)
+
+@students_bp.route("/status")
+def status():
+    return {
+        "response":"student working"
+    }

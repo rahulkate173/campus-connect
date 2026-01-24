@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parent Portal | University Hub</title>
+
+    <!-- ✅ correct: static file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style/parentdashboard-style.css') }}">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -19,7 +21,12 @@
                     <span>Parent of: John Sharma (TE Comp)</span>
                 </div>
             </div>
-            <button class="logout-btn" onclick="location.href='../index.html'">Logout</button>
+
+            <!-- ✅ FIXED logout -->
+            <button class="logout-btn"
+                    onclick="location.href='{{ url_for('home') }}'">
+                Logout
+            </button>
         </nav>
 
         <header class="dash-header">
@@ -28,10 +35,14 @@
         </header>
 
         <div class="parent-grid">
-            
-            <div class="p-card" onclick="location.href='parent-attendance.html'">
+
+            <!-- ✅ Attendance -->
+            <div class="p-card"
+                 onclick="location.href='{{ url_for('parents.attendance') }}'">
                 <div class="card-top">
-                    <div class="icon-wrap bg-green"><i class="fas fa-calendar-check"></i></div>
+                    <div class="icon-wrap bg-green">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
                     <div class="stats">
                         <span class="big-num">88%</span>
                         <small>Avg. Attendance</small>
@@ -41,12 +52,18 @@
                     <h3>Attendance</h3>
                     <p>Detailed subject-wise presence and monthly reports.</p>
                 </div>
-                <div class="card-footer">View Report <i class="fas fa-chevron-right"></i></div>
+                <div class="card-footer">
+                    View Report <i class="fas fa-chevron-right"></i>
+                </div>
             </div>
 
-            <div class="p-card" onclick="location.href='parent-academics.html'">
+            <!-- ✅ Academics -->
+            <div class="p-card"
+                 onclick="location.href='{{ url_for('parents.academics') }}'">
                 <div class="card-top">
-                    <div class="icon-wrap bg-blue"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="icon-wrap bg-blue">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="stats">
                         <span class="big-num">8.9</span>
                         <small>Current SGPA</small>
@@ -56,12 +73,18 @@
                     <h3>Academics</h3>
                     <p>View internal marks, final results, and credit points.</p>
                 </div>
-                <div class="card-footer">View Marks <i class="fas fa-chevron-right"></i></div>
+                <div class="card-footer">
+                    View Marks <i class="fas fa-chevron-right"></i>
+                </div>
             </div>
 
-            <div class="p-card" onclick="location.href='parent-announcements.html'">
+            <!-- ✅ Announcements -->
+            <div class="p-card"
+                 onclick="location.href='{{ url_for('parents.announcements') }}'">
                 <div class="card-top">
-                    <div class="icon-wrap bg-orange"><i class="fas fa-bullhorn"></i></div>
+                    <div class="icon-wrap bg-orange">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
                     <div class="stats">
                         <span class="big-num">03</span>
                         <small>New Notices</small>
@@ -71,7 +94,9 @@
                     <h3>Announcements</h3>
                     <p>General college notices and parent-teacher meeting alerts.</p>
                 </div>
-                <div class="card-footer">View Notices <i class="fas fa-chevron-right"></i></div>
+                <div class="card-footer">
+                    View Notices <i class="fas fa-chevron-right"></i>
+                </div>
             </div>
 
         </div>

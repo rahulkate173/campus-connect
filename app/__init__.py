@@ -1,7 +1,9 @@
 from flask import Flask
+import os
 
 def create_app():
-    app = Flask(__name__)
+    template_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "templates")
+    app = Flask(__name__,template_folder=template_path)
 
     from .parents import parents_bp
     from .student import students_bp
