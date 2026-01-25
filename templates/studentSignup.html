@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Signup | University Hub</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/studentSignup.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="student-theme">
+
+<div class="auth-container">
+    <div class="auth-box">
+
+        <div class="header">
+            <i class="fas fa-user-graduate logo-icon"></i>
+            <h1>Create Student Account</h1>
+            <p>Please fill in your details to register.</p>
+        </div>
+
+        <form id="signupForm" method="POST" action="{{ url_for('students.student_signup') }}">
+
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <div class="field">
+                    <i class="fas fa-user"></i>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your full name"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">University Email</label>
+                <div class="field">
+                    <i class="fas fa-envelope"></i>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="name@pvgcoet"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="field">
+                    <i class="fas fa-lock"></i>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a strong password"
+                        required
+                    >
+                </div>
+            </div>
+
+            <!-- Simple CAPTCHA -->
+            <div class="input-group captcha-group">
+                <label>
+                    <input
+                        type="checkbox"
+                        name="captcha"
+                        required
+                    >
+                    I am not a robot
+                </label>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span id="btnText">Create Account</span>
+                <div id="loader" class="hidden"></div>
+            </button>
+
+        </form>
+
+        <div class="footer">
+            <p>Already have an account?
+                <a href="{{ url_for('students.student_login') }}">Sign in</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="{{ url_for('static', filename='script/student-signup-auth.js') }}"></script>
+</body>
+</html>
