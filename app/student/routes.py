@@ -1,41 +1,60 @@
-# app/students/routes.py
-from flask import Blueprint, render_template,session,request,redirect,url_for
+from flask import Blueprint, render_template, session, request, redirect, url_for
 import os
-template_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "templates")
-static_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "static")
-students_bp = Blueprint("students", __name__)
+from server import view_data, create_data
+
+students_bp = Blueprint("students", __name__, url_prefix="/students")
+
 
 @students_bp.route("/")
 def dashboard():
     student = {
-        "name": "John Student",
-        "id": "2024-UI-101",
-        "initials": "JS"
+        "name": session.get("student_name", "Student"),
+        "email": session.get("student_email"),
+        "initials": "ST"
     }
-    return render_template("studentdashboard.html", student=student)
+    return render_template("student-dashboard.html", student=student)
+
 
 @students_bp.route("/status")
 def status():
-    return {
-        "response":"student working"
-    }
+    return {"response": "student working"}
 
-@students_bp.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('password')
 
-        # TEMP authentication logic (replace with DB later)
-        if email.endswith('@university.edu') and password == 'student123':
-            session['user_role'] = 'student'
-            session['user_email'] = email
+@students_bp.route("/login", methods=["GET", "POST"])
+def student_login():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
 
-            return redirect(url_for('students.attendance'))
+        if view_data(username=email, password=password):
+            return redirect(url_for("students.dashboard"))
 
         return render_template(
-            'studentlogin.html',
+            "studentLogin.html",
             error="Invalid email or password"
         )
 
-    return render_template('studentlogin.html')
+    return render_template("studentLogin.html")
+
+
+@students_bp.route("/signup", methods=["GET", "POST"])
+def student_signup():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
+
+        if email and email.endswith("@pvgcoet"):
+            if create_data(username=email, password=password):
+                return redirect(url_for("students.student_login"))
+
+            return render_template(
+                "studentSignup.html",
+                error="User already exists"
+            )
+
+        return render_template(
+            "studentSignup.html",
+            error="Invalid university email"
+        )
+
+    return render_template("studentSignup.html")
