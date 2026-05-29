@@ -1,39 +1,14 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
-# Virtual environments
-.venv
-venv/
-env/
-
-# Environment variables
 .env
-.env.local
-
-# Vercel
-.vercel
-
-# Docker
-docker-compose.override.yml
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+.venv/
+__pycache__/
+*.pyc
+*.pyo
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Temporary files
-tmp/
-temp/
+node_modules/
+*.egg-info/
+dist/
+build/
+.vercel/
+Uploads/
+*.xlsx
+uv.lock
